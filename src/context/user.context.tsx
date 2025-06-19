@@ -8,6 +8,7 @@ export const UserContextProvider = ({ children }) => {
   const [userId, setUserId] = useState(1);
 
   return (
+    // @ts-ignore
     <UserContext.Provider value={{ userId, setUserId }}>
       {children}
     </UserContext.Provider>

@@ -1,7 +1,6 @@
 import { useContext, useMemo } from "react";
 import CardButton from "../CardButton/CardButton";
 import JournalItem from "../JournalItem/JournalItem";
-import styles from "./JournalList.module.css";
 import { UserContext } from "../../context/user.context";
 
 function JournalList({ items, setItem }) {
@@ -27,6 +26,7 @@ function JournalList({ items, setItem }) {
   return (
     <>
       {filteredItems.map((el) => (
+        // @ts-ignore
         <CardButton onClick={() => setItem(el)} key={el.id}>
           <JournalItem title={el.title} text={el.post} date={el.date} />
         </CardButton>

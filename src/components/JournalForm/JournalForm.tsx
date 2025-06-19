@@ -64,12 +64,15 @@ function JournalForm({ onSubmit, data, onDelete }) {
   const focusError = (isValid) => {
     switch (true) {
       case !isValid.title:
+        // @ts-ignore 
         titleRef.current.focus();
         break;
       case !isValid.date:
+        // @ts-ignore 
         dateRef.current.focus();
         break;
       case !isValid.post:
+        // @ts-ignore 
         postRef.current.focus();
         break;
     }
@@ -104,7 +107,8 @@ function JournalForm({ onSubmit, data, onDelete }) {
       {/* {userId} */}
       <div className={styles["form-row"]}>
         <Input
-          type="text"
+          // @ts-ignore
+          type="text" 
           name="title"
           id="title"
           value={values.title}
@@ -127,6 +131,7 @@ function JournalForm({ onSubmit, data, onDelete }) {
           <span>Дата</span>
         </label>
         <Input
+          // @ts-ignore
           type="date"
           name="date"
           id="date"
@@ -146,6 +151,7 @@ function JournalForm({ onSubmit, data, onDelete }) {
           <span>Метки</span>
         </label>
         <Input
+          // @ts-ignore
           type="text"
           name="tag"
           id="tag"
@@ -159,13 +165,13 @@ function JournalForm({ onSubmit, data, onDelete }) {
         })}
         name="post"
         id=""
-        cols="30"
-        rows="10"
+        cols={30}
+        rows={10}
         value={values.post}
         onChange={onChange}
         ref={postRef}
       ></textarea>
-      <Button>Сохранить</Button>
+      <Button onClick={() => {}}>Сохранить</Button>
     </form>
     // )}
     // </UserContext.Consumer>

@@ -2,7 +2,6 @@ import { useCallback, useState } from "react";
 import Button from "../Button/Button";
 import Logo from "../Logo/Logo";
 import SelectUser from "../SelectUser/SelectUser";
-import styles from "./Header.module.css";
 
 const logos = ["/vite.svg", "/react.svg"];
 

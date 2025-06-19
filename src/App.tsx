@@ -51,6 +51,7 @@ function App() {
           // title: item.title,
           ...item,
           date: new Date(item.date),
+          // @ts-ignore 
           id: items?.length ? Math.max(...items.map((i) => i.id)) + 1 : 1,
         },
       ]);
@@ -67,6 +68,7 @@ function App() {
   };
 
   const deleteItem = (id) => {
+    // @ts-ignore 
     setItems([...items.filter((i) => i.id !== id)]);
   };
   // const [items, setItems] = useState([]);

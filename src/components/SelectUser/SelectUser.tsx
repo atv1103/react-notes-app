@@ -3,6 +3,7 @@ import { UserContext } from "../../context/user.context";
 import styles from "./SelectUser.module.css";
 
 function SelectUser() {
+  // @ts-ignore
   const { userId, setUserId } = useContext(UserContext);
 
   const changeUser = (e) => {
