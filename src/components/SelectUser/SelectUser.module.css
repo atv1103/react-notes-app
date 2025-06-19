@@ -1,6 +1,10 @@
 .select {
     padding: 10px;
-    background: none;
+    background: #323232;
     border: 1px solid #323232;
     color: #fff;
+}
+
+option {
+    background-color: #323232;
 }
